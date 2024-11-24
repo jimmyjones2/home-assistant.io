@@ -22,6 +22,7 @@ Tested routers:
 - Linksys WRT1900ACS Dual-band Wi-Fi Router
 - Linksys EA6900 AC1900 Dual-Band Wi-Fi Router
 - Linksys EA8300 Max-Stream AC2200 Tri-Band Wi-Fi Router
+- Linksys MX5500 Velop Atlas WiFi 6 Router (requires password)
 
 ## Setup
 
@@ -39,10 +40,22 @@ device_tracker:
     host: 192.168.1.1
 ```
 
+{% note %}
+Newer devices require a password to be set
+{% endnote %}
+
 {% configuration %}
 host:
   description: The hostname or IP address of your router, e.g., `192.168.1.1`.
   required: true
+  type: string
+username:
+  description: Router username (defaults to admin)
+  required: false
+  type: string
+password:
+  description: Router password
+  required: false
   type: string
 {% endconfiguration %}
 
